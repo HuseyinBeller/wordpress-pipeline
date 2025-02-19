@@ -56,7 +56,7 @@ module "efs" {
   security_groups = [module.security.efs_sg_id]
 }
 
-# RDS Module
+## RDS Module
 module "rds" {
   source = "./modules/rds"
 
