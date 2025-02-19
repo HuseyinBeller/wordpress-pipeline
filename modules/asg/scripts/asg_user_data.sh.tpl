@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Set required variables
+# Set required variables for AWS_REGION
 AWS_REGION="eu-west-2"
 
 # Fetch the first EFS File System ID
@@ -15,7 +15,7 @@ if [ -z "$EFS_FILE_SYSTEM_ID" ]; then
   exit 1
 fi
 
-# Fetch the EFS DNS name
+## Fetch the EFS DNS name 
 EFS_DNS_NAME="$EFS_FILE_SYSTEM_ID.efs.$AWS_REGION.amazonaws.com"
 
 # update the software packages on the ec2 instance 
